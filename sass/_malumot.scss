@@ -1,0 +1,742 @@
+.malumot{
+  padding: 150px 0 0 0;
+  &-title{
+    text-align: center;
+    font-size: 60px;
+    color: #333;
+    letter-spacing: 3px;
+  }
+  &-content{
+    padding: 0 30px;
+    margin: 30px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    .malumot-text{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &__title{
+        font-size: 28px;
+        letter-spacing: 1px;
+        color: darken(#333,10);
+      }
+      &__desc{
+        color: darken(#333,5);
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+    }
+    .malumot-img{
+    &__src{
+      border: 15px solid #aaa;
+      border-radius: 50%;
+      width: 700px;
+      height: 400px;
+    }
+    }
+  }
+  &-footer{
+    background: lighten(#aaa,15);
+    margin-top: 40px;
+    padding: 50px 80px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    &-text{
+      width: 80%;
+      font-size: 65px;
+      color: #333;
+      letter-spacing: 4px;
+    }
+    &-scroll{
+      border: 5px solid #aaa;
+      border-radius: 40px;
+      max-width: 800px;
+      overflow-x: hidden;
+      &-content{
+        display: flex;
+        transition: 300ms;
+        .malumot-footer-scroll-text{
+          background: darken(#fff,5);
+          padding: 20px 30px;
+          min-width: 800px;
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          &__img{
+            width: 200px;
+            height: 300px;
+            border: 10px solid #aaa;
+            border-radius: 50%;
+          }
+          &__desc{
+            text-align: justify;
+            font-size: 22px;
+            font-family: 'semibold';
+            color: #333;
+          }
+          &-btn{
+            width: 30px;
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+  .malumot-next{
+    transform: translate(-100%);
+  }
+  .malumot-fool{
+    transform: translate(0);
+  }
+  &-save{
+    background: #fff;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    &__title{
+      font-size: 55px;
+      font-family: 'medium';
+      color: #333;
+    }
+    &-row{
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 4px solid #333;
+      background: lighten(#aaa,20);
+      gap: 20px;
+      padding: 20px 0;
+      position: relative;
+      &::after{
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 90%;
+        background: #333;
+        left: 50%;
+      }
+      &-col{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 0 10px;
+        &__img{
+          width: 250px;
+          height: 250px;
+        }
+        &__desc{
+          font-size: 30px;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:2560px) {
+  .malumot{
+    &-title{
+      font-size: 100px;
+    }
+    &-content{
+      .malumot-text{
+        &__title{
+          font-size: 35px;
+        }
+        &__desc{
+          font-size: 35px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 900px;
+          height: 500px;
+        }
+      }
+    }
+    &-footer{
+      &-scroll{
+        max-width: 1200px;
+        &-content{
+          .malumot-footer-scroll-text{
+            min-width: 1200px;
+            &__img{
+              width: 250px;
+              height: 350px;
+            }
+            &__desc{
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      &-row{
+        &-col{
+          width: 1000px;
+          &__img{
+            width: 400px;
+            height: 400px;
+          }
+          &__desc{
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:1920px) {
+  .malumot{
+    &-title{
+      font-size: 80px;
+    }
+    &-content{
+      .malumot-text{
+        &__title{
+          font-size: 30px;
+        }
+        &__desc{
+          font-size: 30px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 800px;
+          height: 400px;
+        }
+      }
+    }
+    &-footer{
+      &-scroll{
+        max-width: 1000px;
+        &-content{
+          .malumot-footer-scroll-text{
+            min-width: 1000px;
+            &__img{
+              width: 250px;
+              height: 350px;
+            }
+            &__desc{
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      &-row{
+        &-col{
+          width: 600px;
+          &__img{
+            width: 230px;
+            height: 230px;
+          }
+          &__desc{
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:1600px) {
+  .malumot{
+    &-title{
+      font-size: 60px;
+    }
+    &-content{
+      .malumot-text{
+        &__title{
+          font-size: 28px;
+        }
+        &__desc{
+          font-size: 24px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 700px;
+          height: 400px;
+        }
+      }
+    }
+    &-footer{
+      &-scroll{
+        max-width: 800px;
+        &-content{
+          .malumot-footer-scroll-text{
+            min-width: 800px;
+            &:last-of-type{
+              padding: 10px 60px 10px 10px;
+            }
+            &__img{
+              width: 200px;
+              height: 300px;
+            }
+            &__desc{
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      &-row{
+        &-col{
+          width: 100%;
+          &__img{
+            width: 250px;
+            height: 250px;
+          }
+          &__desc{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:1440px) {
+  .malumot{
+    &-title{
+      font-size: 60px;
+    }
+    &-content{
+      .malumot-text{
+        &__title{
+          font-size: 24px;
+        }
+        &__desc{
+          font-size: 20px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 600px;
+          height: 300px;
+        }
+      }
+    }
+    &-footer{
+      &-text{
+        font-size: 50px;
+      }
+      &-scroll{
+        max-width: 600px;
+        &-content{
+          .malumot-footer-scroll-text{
+            min-width: 600px;
+            &__img{
+              width: 150px;
+              height: 250px;
+            }
+            &__desc{
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      &-row{
+        &-col{
+          width: 100%;
+          &__img{
+            width: 200px;
+            height: 200px;
+          }
+          &__desc{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:1024px) {
+  .malumot{
+    &-title{
+      font-size: 50px;
+    }
+    &-content{
+      .malumot-text{
+        &__title{
+          font-size: 20px;
+        }
+        &__desc{
+          font-size: 18px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 400px;
+          height: 200px;
+          border: 5px solid #aaa;
+        }
+      }
+    }
+    &-footer{
+      &-text{
+        font-size: 30px;
+      }
+      &-scroll{
+        max-width: 500px;
+        &-content{
+          .malumot-footer-scroll-text{
+            gap: 10px;
+            min-width: 500px;
+            padding: 10px 30px;
+            &__img{
+              width: 100px;
+              height: 150px;
+              border: 5px solid #aaa;
+            }
+            &__desc{
+              font-size: 12px;
+            }
+            &__btn{
+              width: 20px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      &-row{
+        &-col{
+          width: 100%;
+          &__img{
+            width: 200px;
+            height: 200px;
+          }
+          &__desc{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:768px) {
+  .malumot{
+    padding-top: 120px;
+    &-title{
+      font-size: 50px;
+    }
+    &-content{
+      flex-direction: column;
+      .malumot-text{
+        &__title{
+          font-size: 20px;
+        }
+        &__desc{
+          font-size: 18px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 400px;
+          height: 200px;
+          border: 5px solid #aaa;
+        }
+      }
+    }
+    &-footer{
+      flex-direction: column;
+      &-text{
+        text-align: center;
+        font-size: 30px;
+      }
+      &-scroll{
+        max-width: 500px;
+        &-content{
+          .malumot-footer-scroll-text{
+            gap: 10px;
+            min-width: 500px;
+            padding: 10px 40px;
+            &__img{
+              width: 100px;
+              height: 150px;
+              border: 5px solid #aaa;
+            }
+            &__desc{
+              font-size: 12px;
+            }
+            &-btn{
+              width: 50px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      &-row{
+        &-col{
+          width: 100%;
+          &__img{
+            width: 170px;
+            height: 170px;
+          }
+          &__desc{
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:425px) {
+  .malumot{
+    padding-top: 120px;
+    &-title{
+      font-size: 50px;
+    }
+    &-content{
+      flex-direction: column;
+      .malumot-text{
+        &__title{
+          font-size: 20px;
+        }
+        &__desc{
+          font-size: 18px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 400px;
+          height: 200px;
+          border: 5px solid #aaa;
+        }
+      }
+    }
+    &-footer{
+      flex-direction: column;
+      &-text{
+        text-align: center;
+        width: 100%;
+        font-size: 25px;
+      }
+      &-scroll{
+        max-width: 400px;
+        &-content{
+          gap: 0px;
+          .malumot-footer-scroll-text{
+            gap: 5px;
+            min-width: 400px;
+            padding: 10px 20px;
+            &:last-of-type{
+              padding: 10px 60px 10px 10px;
+            }
+            &__img{
+              width: 80px !important;
+              height: 120px !important;
+              border: 5px solid #aaa;
+            }
+            &__desc{
+              font-size: 10px;
+            }
+            &-btn{
+              width: 30px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      gap: 10px;
+      &__title{
+        font-size: 40px;
+      }
+      &-row{
+        &-col{
+          width: 100%;
+          &__img{
+            width: 100px;
+            height: 100px;
+          }
+          &__desc{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:375px) {
+  .malumot{
+    padding-top: 60px;
+    &-title{
+      font-size: 50px;
+    }
+    &-content{
+      flex-direction: column;
+      .malumot-text{
+        &__title{
+          font-size: 20px;
+        }
+        &__desc{
+          font-size: 18px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 340px;
+          height: 200px;
+          border: 5px solid #aaa;
+        }
+      }
+    }
+    &-footer{
+      flex-direction: column;
+      &-text{
+        text-align: center;
+        width: 100%;
+        font-size: 25px;
+      }
+      &-scroll{
+        max-width: 320px;
+        &-content{
+          gap: 0px;
+          .malumot-footer-scroll-text{
+            gap: 5px;
+            min-width: 320px;
+            &:last-of-type{
+              padding: 10px 60px 10px 10px;
+            }
+            &__img{
+              width: 60px;
+              height: 100px;
+              border: 4px solid #aaa;
+            }
+            &__desc{
+              font-size: 11px;
+            }
+            &-btn{
+              width: 20px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      padding-top: 50px;
+      gap: 10px;
+      &__title{
+        font-size: 40px;
+      }
+      &-row{
+        &-col{
+          width: 100%;
+          &__img{
+            width: 80px;
+            height: 80px;
+          }
+          &__desc{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:320px) {
+  .malumot{
+    padding-top: 60px;
+    &-title{
+      font-size: 30px;
+    }
+    &-content{
+      flex-direction: column;
+      .malumot-text{
+        &__title{
+          font-size: 15px;
+        }
+        &__desc{
+          font-size: 12px;
+        }
+      }
+      .malumot-img{
+        &__src{
+          width: 300px;
+          height: 150px;
+          border: 5px solid #aaa;
+        }
+      }
+    }
+    &-footer{
+      flex-direction: column;
+      &-text{
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+      }
+      &-scroll{
+        max-width: 300px;
+        &-content{
+          gap: 0px;
+          .malumot-footer-scroll-text{
+            gap: 5px;
+            min-width: 300px;
+            &:last-of-type{
+              padding: 10px 60px 10px 10px;
+            }
+            &__img{
+              width: 60px;
+              height: 100px;
+              border: 4px solid #aaa;
+            }
+            &__desc{
+              font-size: 10px;
+            }
+            &-btn{
+              width: 10px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+    &-save{
+      padding-top: 50px;
+      gap: 10px;
+      &__title{
+        font-size: 40px;
+      }
+      &-row{
+        flex-direction: column;
+        &::after{
+          width: 0;
+          height: 0;
+        }
+        &-col{
+          width: 100%;
+          &__img{
+            width: 80px;
+            height: 80px;
+          }
+          &__desc{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
