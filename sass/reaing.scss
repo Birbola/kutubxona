@@ -72,6 +72,15 @@
   }
 }
 @import "boglanish";
+
+@media only screen and (max-width:1920px) {
+  .navbar{
+    &-link{
+      font-size: 50px;
+      padding: 1px;
+    }
+  }
+}
 @media screen and (max-width:1024px) {
   .navbar{
     width: 30%;
